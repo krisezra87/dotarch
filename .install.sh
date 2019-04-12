@@ -29,6 +29,7 @@ fi
 
 mkdir -p ~/.arch
 mv $DIR/* ~/.arch/
+rmdir $DIR
 
 ln -sf ~/.arch/config ~/.config
 ln -sf ~/.arch/xinitrc ~/.xinitrc
