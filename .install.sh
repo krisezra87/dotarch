@@ -17,10 +17,10 @@ else
     fi
 fi
 
-# Check if .config exists, if it does move it
-if [ -d ~/.config ]; then
-    mv ~/.config ~/.config.old
-fi
+# # Check if .config exists, if it does move it
+# if [ -d ~/.config ]; then
+#     mv ~/.config ~/.config.old
+# fi
 
 # Check if x stuff exists, if it does move it
 if [ -f ~/.xinitrc ]; then
