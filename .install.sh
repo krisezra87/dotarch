@@ -5,8 +5,12 @@ shopt -s dotglob
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 
 # Check if .arch exists, if it does move it
-if [ -d ~/.arch ]; then
-    mv ~/.arch ~/.arch.old
+if [ $(pwd) == $DIR ]; then
+    echo ".arch is properly located"
+else
+    if [ -d ~/.arch ]; then
+        mv ~/.arch ~/.arch.old
+    fi
 fi
 
 # Check if .config exists, if it does move it
