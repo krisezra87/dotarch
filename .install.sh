@@ -5,7 +5,7 @@ shopt -s dotglob
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 
 # Check if .arch exists, if it does move it
-if [ $(pwd) == $DIR ]; then
+if [ $DIR == ~/.arch ]; then
     echo ".arch is properly located"
 else
     if [ -d ~/.arch ]; then
