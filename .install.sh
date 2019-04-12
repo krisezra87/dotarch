@@ -3,6 +3,26 @@ shopt -s dotglob
 
 # Get the directory of this file
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+
+# Check if .arch exists, if it does move it
+if [ -d ~/.arch ]; then
+    mv ~/.arch ~/.arch.old
+fi
+
+# Check if .config exists, if it does move it
+if [ -d ~/.config ]; then
+    mv ~/.config ~/.config.old
+fi
+
+# Check if x stuff exists, if it does move it
+if [ -f ~/.xinitrc ]; then
+    mv ~/.xinitrc ~/.xinitrc.old
+fi
+
+if [ -f ~/.Xresources ]; then
+    mv ~/.Xresources ~/.Xresources.old
+fi
+
 mkdir -p ~/.arch
 mv $DIR/* ~/.arch/
 
