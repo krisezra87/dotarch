@@ -5,8 +5,10 @@ shopt -s dotglob
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 
 # Check if .arch exists, if it does move it
+FLAG=true
 if [ $DIR == ~/.arch ]; then
     echo ".arch is properly located"
+    FLAG=false
 else
     if [ -d ~/.arch ]; then
         mv ~/.arch ~/.arch.old
@@ -27,9 +29,11 @@ if [ -f ~/.Xresources ]; then
     mv ~/.Xresources ~/.Xresources.old
 fi
 
-mkdir -p ~/.arch
-mv $DIR/* ~/.arch/
-rmdir $DIR
+if $FLAG; then
+    mkdir -p ~/.arch
+    mv $DIR/* ~/.arch/
+    rmdir $DIR
+fi
 
 ln -sf ~/.arch/config ~/.config
 ln -sf ~/.arch/xinitrc ~/.xinitrc
