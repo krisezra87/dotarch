@@ -1,6 +1,9 @@
 #!/bin/bash
 echo "Running .arch installer..."
 
+# Don't need detached head nonsense
+git checkout master
+
 shopt -s dotglob
 
 # Get the directory of this file
