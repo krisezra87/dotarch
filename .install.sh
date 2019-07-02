@@ -40,6 +40,8 @@ if $FLAG; then
     rmdir $DIR
 fi
 
-ln -sf ~/.arch/config ~/.config
+ln -sf ~/.arch/config/i3 ~/.config/i3
 ln -sf ~/.arch/xinitrc ~/.xinitrc
 ln -sf ~/.arch/Xresources ~/.Xresources
+ln -sf ~/.arch/xprofile ~/.xprofile
+ln -sf ~/.arch/config/dwm ~/.config/dwm
