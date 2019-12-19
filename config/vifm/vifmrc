@@ -141,7 +141,7 @@ command! make !!make %a
 command! mkcd :mkdir %a | cd %a
 command! vgrep vim "+grep %a"
 command! reload :write | restart
-
+command! SXIV :!sxiv -r -t -s d %d  &
 " ------------------------------------------------------------------------------
 
 " The file type is for the default programs to be used with
@@ -236,7 +236,7 @@ filetype *.[1-8] man ./%c
 fileviewer *.[1-8] man ./%c | col -b
 
 " Images
-filextype *.bmp,*.xpm
+filextype *.bmp,*.xpm,*.jpg,*.jpeg,*.png,*.gif
         \ {View in sxiv}
         \ sxiv %f,
         \ {View in gpicview}
@@ -252,9 +252,9 @@ filextype *.bmp,*.xpm
          \ %pc
          \ vifmimg clear
 
-filextype *.jpg,*.jpeg,*.png,*.gif
-       \ {View in feh}
-       \ feh -FZ %d --start-at %d/%c 2>/dev/null
+" filextype *.jpg,*.jpeg,*.png,*.gif
+"        \ {View in feh}
+"        \ feh -FZ %d --start-at %d/%c 2>/dev/null
 
 " OpenRaster
 filextype *.ora
