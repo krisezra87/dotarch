@@ -1,3 +1,4 @@
 config/qutebrowser/*
 !config/qutebrowser/config.py
 vifminfo
+vifm-help.txt
