@@ -8,7 +8,7 @@
 feh --bg-scale ~/Pictures/background.jpg &
 
 # Start a compositor for transparency
-compton &
+picom &
 
 # Make matlab work when you spawn it
 export _JAVA_AWT_WM_NONREPARENTING=1 # For matlab to work in dwm.
