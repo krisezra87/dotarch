@@ -411,6 +411,10 @@ set vifminfo=dhistory,savedirs,chistory,state,tui,shistory,
 
 " Sample mappings
 
+" Make window movement parallel my vim
+nnoremap <C-H> <C-W>h
+nnoremap <C-L> <C-W>l
+
 " Start shell in current directory
 nnoremap s :shell<cr>
 
