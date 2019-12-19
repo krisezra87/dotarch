@@ -1,59 +1,81 @@
-set background=dark
+" You can edit this file by hand.
+" The " character at the beginning of a line comments out the line.
+" Blank lines are ignored.
 
+" The Default color scheme is used for any directory that does not have
+" a specified scheme and for parts of user interface like menus. A
+" color scheme set for a base directory will also
+" be used for the sub directories.
 
-let colors_name = "wombat"
+" The standard ncurses colors are:
+" Default = -1 = None, can be used for transparency or default color
+" Black = 0
+" Red = 1
+" Green = 2
+" Yellow = 3
+" Blue = 4
+" Magenta = 5
+" Cyan = 6
+" White = 7
 
-" General colors
-hi Normal ctermfg=252 ctermbg=234 cterm=none guifg=#e3e0d7 guibg=#242424 gui=none
-hi Cursor ctermfg=234 ctermbg=228 cterm=none guifg=#242424 guibg=#eae788 gui=none
-hi Visual ctermfg=251 ctermbg=239 cterm=none guifg=#c3c6ca guibg=#554d4b gui=none
-hi VisualNOS ctermfg=251 ctermbg=236 cterm=none guifg=#c3c6ca guibg=#303030 gui=none
-hi Search ctermfg=177 ctermbg=241 cterm=none guifg=#d787ff guibg=#636066 gui=none
-hi Folded ctermfg=103 ctermbg=237 cterm=none guifg=#a0a8b0 guibg=#3a4046 gui=none
-hi Title ctermfg=230 cterm=bold guifg=#ffffd7 gui=bold
-hi StatusLine ctermfg=230 ctermbg=238 cterm=none guifg=#ffffd7 guibg=#444444 gui=none
-hi VertSplit ctermfg=238 ctermbg=238 cterm=none guifg=#444444 guibg=#444444 gui=none
-hi StatusLineNC ctermfg=241 ctermbg=238 cterm=none guifg=#857b6f guibg=#444444 gui=none
-hi LineNr ctermfg=241 ctermbg=232 cterm=none guifg=#857b6f guibg=#080808 gui=none
-hi SpecialKey ctermfg=241 ctermbg=235 cterm=none guifg=#626262 guibg=#2b2b2b gui=none
-hi WarningMsg ctermfg=203 guifg=#ff5f55
-hi ErrorMsg ctermfg=196 ctermbg=234 cterm=bold guifg=#e3e0d7 guibg=#3a3a3a gui=bold
-hi SpellBad ctermfg=196 ctermbg=234 cterm=bold guifg=#e3e0d7 guibg=#3a3a3a gui=bold
-hi SpellCap ctermfg=196 ctermbg=234 cterm=bold guifg=#e3e0d7 guibg=#3a3a3a gui=bold
+" Light versions of colors are also available (set bold attribute):
+" LightBlack
+" LightRed
+" LightGreen
+" LightYellow
+" LightBlue
+" LightMagenta
+" LightCyan
+" LightWhite
 
-" Vim >= 7.0 specific colors
-if version >= 700
-hi CursorLine ctermbg=236 cterm=none guibg=#32322f
-hi MatchParen ctermfg=228 ctermbg=101 cterm=bold guifg=#eae788 guibg=#857b6f gui=bold
-hi Pmenu ctermfg=230 ctermbg=238 guifg=#ffffd7 guibg=#444444
-hi PmenuSel ctermfg=232 ctermbg=192 guifg=#080808 guibg=#cae982
-endif
+" Available attributes (some of them can be combined):
+" bold
+" underline
+" reverse or inverse
+" standout
+" italic (on unsupported systems becomes reverse)
+" none
 
-" Diff highlighting
-hi DiffAdd ctermbg=17 guibg=#2a0d6a
-hi DiffDelete ctermfg=234 ctermbg=60 cterm=none guifg=#242424 guibg=#3e3969 gui=none
-hi DiffText ctermbg=53 cterm=none guibg=#73186e gui=none
-hi DiffChange ctermbg=237 guibg=#382a37
+" Vifm supports 256 colors you can use color numbers 0-255
+" (requires properly set up terminal: set your TERM environment variable
+" (directly or using resources) to some color terminal name (e.g.
+" xterm-256color) from /usr/lib/terminfo/; you can check current number
+" of colors in your terminal with tput colors command)
 
-" Syntax highlighting
-hi Keyword ctermfg=111 cterm=none guifg=#88b8f6 gui=none
-hi Statement ctermfg=111 cterm=none guifg=#88b8f6 gui=none
-hi Constant ctermfg=173 cterm=none guifg=#e5786d gui=none
-hi Number ctermfg=173 cterm=none guifg=#e5786d gui=none
-hi PreProc ctermfg=173 cterm=none guifg=#e5786d gui=none
-hi Function ctermfg=192 cterm=none guifg=#cae982 gui=none
-hi Identifier ctermfg=192 cterm=none guifg=#cae982 gui=none
-hi Type ctermfg=186 cterm=none guifg=#d4d987 gui=none
-hi Special ctermfg=229 cterm=none guifg=#eadead gui=none
-hi String ctermfg=113 cterm=none guifg=#95e454 gui=none
-hi Comment ctermfg=246 cterm=none guifg=#9c998e gui=none
-hi Todo ctermfg=101 cterm=none guifg=#857b6f gui=none
+" highlight group cterm=attrs ctermfg=foreground_color ctermbg=background_color
 
-" Links
-hi! link FoldColumn Folded
-hi! link CursorColumn CursorLine
-hi! link NonText LineNr
+highlight clear
 
-" Awesome 80 characters delemiter
-execute "set colorcolumn=" . join(range(81,335), ',')
-hi ColorColumn guibg=#262626 ctermbg=235
+highlight Win cterm=none ctermfg=252 ctermbg=234
+highlight Directory cterm=bold ctermfg=111 ctermbg=default
+highlight Link cterm=bold ctermfg=113 ctermbg=default
+highlight BrokenLink cterm=bold ctermfg=red ctermbg=default
+highlight Socket cterm=bold ctermfg=magenta ctermbg=default
+highlight Device cterm=bold ctermfg=red ctermbg=default
+highlight Fifo cterm=bold ctermfg=cyan ctermbg=default
+highlight Executable cterm=bold ctermfg=173 ctermbg=default
+highlight Selected cterm=bold ctermfg=251 ctermbg=239
+highlight CurrLine cterm=bold,reverse ctermfg=default ctermbg=default
+highlight TopLine cterm=none ctermfg=246 ctermbg=235
+highlight TopLineSel cterm=bold ctermfg=black ctermbg=default
+highlight StatusLine cterm=bold ctermfg=246 ctermbg=238
+highlight WildMenu cterm=underline,reverse ctermfg=white ctermbg=black
+highlight CmdLine cterm=none ctermfg=252 ctermbg=235
+highlight ErrorMsg cterm=none ctermfg=red ctermbg=black
+highlight Border cterm=none ctermfg=238 ctermbg=238
+highlight JobLine cterm=bold,reverse ctermfg=black ctermbg=white
+highlight SuggestBox cterm=bold ctermfg=default ctermbg=default
+highlight CmpMismatch cterm=bold ctermfg=white ctermbg=red
+highlight AuxWin cterm=bold,underline,reverse,standout,italic ctermfg=default ctermbg=default
+highlight TabLine cterm=none ctermfg=white ctermbg=black
+highlight TabLineSel cterm=bold,reverse ctermfg=default ctermbg=default
+highlight User1 cterm=bold,underline,reverse,standout,italic ctermfg=default ctermbg=default
+highlight User2 cterm=bold,underline,reverse,standout,italic ctermfg=default ctermbg=default
+highlight User3 cterm=bold,underline,reverse,standout,italic ctermfg=default ctermbg=default
+highlight User4 cterm=bold,underline,reverse,standout,italic ctermfg=default ctermbg=default
+highlight User5 cterm=bold,underline,reverse,standout,italic ctermfg=default ctermbg=default
+highlight User6 cterm=bold,underline,reverse,standout,italic ctermfg=default ctermbg=default
+highlight User7 cterm=bold,underline,reverse,standout,italic ctermfg=default ctermbg=default
+highlight User8 cterm=bold,underline,reverse,standout,italic ctermfg=default ctermbg=default
+highlight User9 cterm=bold,underline,reverse,standout,italic ctermfg=default ctermbg=default
+highlight OtherWin cterm=bold,underline,reverse,standout,italic ctermfg=default ctermbg=default
