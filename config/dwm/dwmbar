@@ -48,6 +48,8 @@ status() { \
 	sed "s/down/E:DOWN/;s/up/E:UP/" /sys/class/net/e*/operstate
     sed "s/down/W:DOWN/;s/up/W:UP/" /sys/class/net/w*/operstate
 
+    echo "$delim"
+
 	# Show unread mail if mutt-wizard is installed.
 	# command -v mw >/dev/null 2>&1 &&
 	# 	echo "$delim" &&
