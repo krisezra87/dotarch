@@ -20,8 +20,7 @@ export _JAVA_AWT_WM_NONREPARENTING=1 # For matlab to work in dwm.
 [[ -d $HOME/scripts ]] && export PATH=$HOME/scripts:$PATH
 
 # Do bar updates for dwm (thanks luke smith)
-dwmbar &
-# [ -f ~/.config/dwm/dwmbar ] && ~/.config/dwm/dwmbar &
+[ -f ~/scripts/dwmbar ] && ~/scripts/dwmbar &
 
 while true; do
     dwm >/dev/null 2>&1
