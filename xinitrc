@@ -8,7 +8,7 @@
 feh --bg-scale ~/Pictures/background.jpg &
 
 # Start a compositor for transparency
-picom &
+picom --config /home/kezra/.config/picom.conf &
 
 # start the notification daemon
 dunst &
