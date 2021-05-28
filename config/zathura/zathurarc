@@ -10,3 +10,7 @@ set recolor "true"
 set recolor-darkcolor "#f6f3e8"
 set recolor-lightcolor "#1c1c1c"
 set recolor-keephue "true"
+
+#
+set synctex true
+set synctex-editor-command "gvim --remote-silent +%{line} %{input}"
