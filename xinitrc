@@ -5,7 +5,8 @@
 #[ -f ~/.xprofile ] && ~/.xprofile &
 
 # Set the background
-feh --bg-scale ~/Pictures/background.jpg &
+# feh --bg-scale ~/Pictures/background.jpg &
+feh --bg-fill ~/Pictures/dark.png
 
 # Start a compositor for transparency
 picom --config /home/kezra/.config/picom.conf &
