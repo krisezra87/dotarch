@@ -10,6 +10,8 @@ c.fonts.hints = "14pt Hack"
 c.fonts.keyhint = "14pt Hack"
 c.fonts.statusbar = "14pt Hack"
 
+c.zoom.default = 125
+
 # Uncomment this to still load settings configured via autoconfig.yml
 # config.load_autoconfig()
 
@@ -62,4 +64,5 @@ c.aliases['speed'] = 'open https://www.keyhero.com/free-typing-test/'
 c.aliases['pmail'] = 'open https://outlook.office365.com/mail/inbox'
 c.aliases['dl'] = 'hint links download'
 c.aliases['pgit'] = 'open https://github.itap.purdue.edu/SystemofSystemsLaboratory'
-c.aliases['git'] = 'github.com/krisezra87'
+c.aliases['git'] = 'open github.com/krisezra87'
+c.aliases['chat'] = 'open https://mail.google.com/chat/u/#chat/welcome'
