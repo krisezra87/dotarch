@@ -10,9 +10,9 @@ feh --bg-fill ~/Pictures/dark.png
 # This might set caps to escape without the hack-around
 setxkbmap -option caps:escape
 
-
 # Start a compositor for transparency
-picom --config /home/kezra/.config/picom.conf &
+# picom --config /home/kezra/.config/picom.conf &
+picom &
 
 # start the notification daemon
 dunst &
