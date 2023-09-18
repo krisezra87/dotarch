@@ -1,12 +1,8 @@
 #!bin/sh
 
-#xrdb -merge ~/.Xresources
-#exec i3
-#[ -f ~/.xprofile ] && ~/.xprofile &
-
 # Set the background
-# feh --bg-scale ~/Pictures/background.jpg &
-feh --bg-fill ~/Pictures/dark.png
+feh --bg-scale ~/Pictures/background.jpg
+
 # This might set caps to escape without the hack-around
 setxkbmap -option caps:escape
 
