@@ -1,0 +1,19 @@
+#!/bin/sh
+
+[ -f ~/.screenlayout/dwm_layout.sh ] && \
+    xrandr --listmonitors | grep -q "DP-2 3440" && \
+    ~/.screenlayout/home_layout
+
+feh --bg-fill ~/Pictures/overwatch.png
+
+setxkbmap -option caps:escape
+
+picom &
+dunst &
+unclutter &
+
+[[ -d $HOME/scripts ]] && export PATH=$HOME/scripts:$PATH
+[ -f $HOME/scripts/dwmbar ] && $HOME/scripts/dwmbar &
+
+# Launch dwm.  If we exit or reload it, we will log out
+dwm >/dev/null 2>&1
