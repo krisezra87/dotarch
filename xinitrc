@@ -1,7 +1,7 @@
 #!bin/sh
 
 # Set the background
-feh --bg-scale ~/Pictures/background.jpg
+feh --bg-scale ~/Pictures/Background.jpg &
 
 # This might set caps to escape without the hack-around
 setxkbmap -option caps:escape
