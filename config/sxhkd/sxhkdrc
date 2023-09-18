@@ -1,0 +1,14 @@
+alt + shift + @Return
+    st
+
+alt + @c
+    brave
+
+alt + @s
+    escrotum -sC
+
+alt + @e
+    st -e neomutt
+
+alt + @t
+    ~/scripts/nt_toggle; pkill -SIGTRAP dwmbar
