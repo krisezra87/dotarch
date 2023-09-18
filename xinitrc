@@ -16,6 +16,8 @@ picom &
 
 # start the notification daemon
 dunst &
+sxhkd &
+unclutter &
 
 # Make matlab work when you spawn it
 export _JAVA_AWT_WM_NONREPARENTING=1 # For matlab to work in dwm.
