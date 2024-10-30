@@ -1,10 +1,10 @@
 #!/bin/sh
 
-[ -f ~/.screenlayout/home_layout ] && \
-    xrandr --listmonitors | grep -q "DP-2 3440" && \
-    ~/.screenlayout/home_layout
+[ -f ~/.screenlayout/work_home.sh ] && \
+    xrandr --listmonitors | grep -q "DP-" && \
+    ~/.screenlayout/work_home.sh
 
-feh --bg-fill ~/Pictures/overwatch.png
+feh --bg-fill ~/Pictures/Background.png
 
 setxkbmap -option caps:escape
 
