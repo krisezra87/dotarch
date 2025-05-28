@@ -6,6 +6,8 @@ feh --bg-scale ~/Pictures/Background.jpg &
 # This might set caps to escape without the hack-around
 setxkbmap -option caps:escape
 
+[[ -f $HOME/.screenlayout/home.sh ]] && $HOME/.screenlayout/home.sh
+
 # Start a compositor for transparency
 # picom --config /home/kezra/.config/picom.conf &
 picom &
@@ -16,7 +18,7 @@ sxhkd &
 unclutter &
 
 # Make matlab work when you spawn it
-export _JAVA_AWT_WM_NONREPARENTING=1 # For matlab to work in dwm.
+# export _JAVA_AWT_WM_NONREPARENTING=1 # For matlab to work in dwm.
 
 # Add scripts directory to path
 [[ -d $HOME/scripts ]] && export PATH=$HOME/scripts:$PATH
