@@ -13,6 +13,7 @@ configs:
 	@ln -sTf $(DOT_PATH)/config/zathura $(CONFIG_PATH)/zathura
 	@ln -sTf $(DOT_PATH)/config/sxiv $(CONFIG_PATH)/sxiv
 	@ln -sTf $(DOT_PATH)/config/sxhkd $(CONFIG_PATH)/sxhkd
+	@ln -sTf $(DOT_PATH)/config/todoist $(CONFIG_PATH)/todoist
 
 x_files:
 	@echo "Linking X..."
