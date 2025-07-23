@@ -10,5 +10,5 @@ alt + @s
 alt + @e
     st -e neomutt
 
-alt + @t
-    ~/scripts/nt_toggle; pkill -SIGTRAP dwmbar
+alt + @r
+    st /home/kezra/.screenlayout/home.sh
